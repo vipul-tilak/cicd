@@ -1,3 +1,6 @@
+options:
+  logs_bucket: gs://cicd-logs-bucket
+
 steps:
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'us-central1-docker.pkg.dev/cicd-demo-458507/cicd/flask-cicd-app:$SHORT_SHA', '.']
